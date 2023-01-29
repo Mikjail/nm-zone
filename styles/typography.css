@@ -1,0 +1,27 @@
+small {
+  font-size: var(--small);
+}
+
+h1 {
+  font-size: 55px;
+}
+
+h2 {
+  font-size: 44px;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+h4 {
+  font-size: var(--x-large);
+}
+
+p {
+  font-size: var(--medium);
+}
+
+button {
+  font-size: 24px;
+}
