@@ -28,6 +28,11 @@ a {
   text-decoration: none;
 }
 
+button,
+a {
+  cursor: pointer;
+}
+
 .btn {
   display: flex;
   align-items: center;
