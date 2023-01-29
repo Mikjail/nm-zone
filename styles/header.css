@@ -18,3 +18,8 @@ li {
   margin-right: 2rem;
   font-size: 1.625rem;
 }
+
+header img {
+  position: relative;
+  left: -4rem;
+}
