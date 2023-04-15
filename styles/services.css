@@ -1,0 +1,35 @@
+#services {
+  background: url(/assets/services/services.svg) center no-repeat;
+  margin: auto;
+}
+.services__wrapper {
+  display: grid;
+  grid-template-columns: 18rem 18rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 8rem;
+}
+
+.services__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 18rem;
+  height: 14.5rem;
+  border-radius: 1rem;
+  border: 0.0625rem solid var(--black);
+
+}
+
+.services__card--bottom:nth-child(even),
+.services__card--top:nth-child(odd) {
+  background-color: var(--primary);
+}
+
+.services__card--top:nth-child(even),
+.services__card--bottom:nth-child(odd) {
+  background-color: var(--secondary);
+  color:white;
+}

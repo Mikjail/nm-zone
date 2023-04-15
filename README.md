@@ -1,6 +1,7 @@
-We are creating a website to offer our Web skills. A 2023 goal!
+We are creating a static site to offer our Web Skills. A 2023 goal!
 
 Tech Stack:
 
 - Html5
 - Css3
+- js

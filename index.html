@@ -11,32 +11,77 @@
     <header>
       <img src="assets/logo.svg" alt="Company Logo" />
       <ul>
-        <li><a href="#"> Home </a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Technologies</a></li>
+        <li><a href="#home"> Home </a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#tech-stack">Technologies</a></li>
       </ul>
       <button class="btn">Get in Touch</button>
     </header>
     <main>
-      <div class="home__wrapper">
-        <div class="home__content">
-          <h1>Hello there!</h1>
-          <h1>
-            it's <span class="accent">Nastya</span> &
-            <span class="accent">Mika</span>!
-          </h1>
-          <p>IT Commpany based in Berlin.</p>
-          <p>
-            We are here to bring your ideas into life, offer creative solutions
-            and maintain your product for your budget.
-          </p>
-          <button class="btn btn-secondary">Explore</button>
+      <section id="home">
+        <div class="home__wrapper">
+          <div class="home__content">
+            <h1>Hello there!</h1>
+            <h1>
+              it's <span class="accent">Nastya</span> &
+              <span class="accent">Mika</span>!
+            </h1>
+            <p>IT Commpany based in Berlin.</p>
+            <p>
+              We are here to bring your ideas into life, offer creative
+              solutions and maintain your product for your budget.
+            </p>
+            <button class="btn btn-secondary">Explore</button>
+          </div>
+          <div class="home__preview">
+            <img src="assets/main/main-pc.svg" alt="" />
+          </div>
         </div>
-        <div class="home__preview">
-          <img src="assets/main/main-pc.svg" alt="" />
+      </section>
+      <section id="about-us">
+        <div class="about-us__wrapper">
+          <div class="about-us__authors">
+            <h3>Nastya</h3>
+            <p>
+              I am <strong>UI/UX</strong> designer with 2 years of experience.
+              In order to learn about my work, here is my personal website
+            </p>
+          </div>
+          <img class="about-us__img" src="assets/about/us.svg" alt="" />
+          <div class="about-us__authors">
+            <h3>Mika</h3>
+            <p>
+              I am a <strong>Web Engineer</strong> with 6 years of experience
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
+      <section id="services">
+        <div class="services__wrapper">
+          <div class="services__card services__card--top">
+            <img src="assets/services/web-design.svg" alt="Web Design">
+            <h4>Web Design</h4>
+          </div>
+          <div class="services__card services__card--top">
+            <img src="assets/services/mobile-app.svg" alt="Web Design">
+            <h4>Mobile App</h4>
+          </div>
+          <div class="services__card services__card--bottom">
+            <img src="assets/services/web-dev.svg" alt="Web Design">
+            <h4>Web Development</h4>
+          </div>
+          <div class="services__card services__card--bottom">
+            <img src="assets/services/ux-research.svg" alt="Web Design">
+            <h4>Mobile App</h4>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
+  <script>
+    if(!document.location.hash) {
+      document.location.hash = '#home'
+    }
+  </script>
 </html>

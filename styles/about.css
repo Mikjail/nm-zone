@@ -1,0 +1,26 @@
+#about-us {
+  margin: auto;
+}
+.about-us__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.about-us__img {
+  height: 380px;
+  object-fit: cover;
+}
+
+.about-us__authors {
+  display: flex;
+  flex-direction: column;
+  gap: var(--large);
+}
+
+.about-us__authors p {
+  font-size: var(--x-large);
+}
+
+.about-us__authors:last-child {
+  text-align: right;
+}
