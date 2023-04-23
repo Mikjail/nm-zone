@@ -55,3 +55,11 @@ a {
 .accent {
   color: var(--accent);
 }
+
+.primary  {
+  color: var(--primary);
+}
+
+.secondary {
+  color: var(--secondary);
+}

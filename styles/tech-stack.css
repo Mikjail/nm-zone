@@ -1,5 +1,5 @@
 #tech-stack {
-    background: url("../assets/tech-stack/pc.svg") 50% 70% no-repeat;
+    background: url("../assets/tech-stack/pc.svg") center no-repeat;
     height: 100%;
     width: 100%;
     margin: auto;
@@ -16,6 +16,12 @@
     box-shadow: var(--img-shadow);
     background-color: var(--white);
 }
+
+.tech-stack__img:hover {
+    cursor: pointer;
+    animation: rotation 3s infinite linear;
+}
+
 .tech-stack__line{
     display: flex;
 }
@@ -59,3 +65,11 @@
     gap: 77%;
 }
 
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
