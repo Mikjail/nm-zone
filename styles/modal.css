@@ -58,7 +58,7 @@
 
 .form {
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .form input, textarea {
@@ -70,6 +70,7 @@
     width: 100%;
     border: none;
     border-radius: 0.25rem;
+    box-shadow: var(--img-shadow);
 }
 
 .form #name {
