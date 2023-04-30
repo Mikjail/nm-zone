@@ -10,12 +10,21 @@
 <body>
 <header>
     <img src="assets/logo.svg" alt="Company Logo"/>
-    <ul>
-        <li><a href="#home"> Home </a></li>
-        <li><a href="#about-us">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#tech-stack">Technologies</a></li>
-    </ul>
+    <input id="burger" type="checkbox"/>
+    <label for="burger" id="burger-container">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <nav>
+        <ul>
+            <li><a href="#home"> Home </a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#tech-stack">Technologies</a></li>
+        </ul>
+    </nav>
     <button class="btn" id="contact-btn">Get in Touch</button>
 </header>
 <main>
@@ -29,14 +38,15 @@
                 </h1>
                 <p>IT Commpany based in Berlin.</p>
                 <p>
-                    We are here to bring your ideas into life, offer creative
-                    solutions and maintain your product for your budget.
+                    We are IT company based in Berlin, who can bring your ideas to life.
                 </p>
                 <button class="btn btn-secondary">Explore</button>
             </div>
             <div class="home__preview">
+                <img src="assets/main/main-mobile.svg" alt="">
                 <img src="assets/main/main-pc.svg" alt=""/>
             </div>
+            <button class="btn">Get in Touch</button>
         </div>
     </section>
     <section id="about-us">
@@ -78,7 +88,6 @@
         </div>
     </section>
     <section id="tech-stack">
-
         <div class="tech-stack__grid">
             <div class="tech-stack__img">
                 <img src="assets/tech-stack/figma.svg" alt="">
@@ -146,18 +155,19 @@
             <h2 class="secondary">Let's collaborate!</h2>
         </div>
         <div class="modal-body">
-            <form class="form" action="">
+            <form id="form" class="form" onsubmit="onSubmit">
                 <label for="name">
-                    <input type="text" name="name" id="name" placeholder="Jane Doe">
+                    <input type="text" name="name" id="name" placeholder="Jane Doe" required>
                 </label>
                 <label for="email">
-                    <input type="email" name="email" id="email" placeholder="example@email.com">
+                    <input type="email" name="email" id="email" placeholder="example@email.com" required>
                 </label>
                 <label for="subject">
-                    <input type="text" name="subject" id="subject" placeholder="Subject">
+                    <input type="text" name="subject" id="subject" placeholder="Subject" required>
                 </label>
                 <label for="message">
-                    <textarea id="message" placeholder="Your message" style="resize: none"></textarea>
+                    <textarea id="message" name="message" placeholder="Your message" style="resize: none"
+                              required></textarea>
                 </label>
                 <button type="submit" class="btn">
                     Submit
@@ -176,10 +186,10 @@
     const modal = document.getElementById("myModal");
 
     // Get the button that opens the modal
-    var btn = document.getElementById("contact-btn");
+    const btn = document.getElementById("contact-btn");
 
     // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    const span = document.getElementsByClassName("close")[0];
 
     // When the user clicks on the button, open the modal
     btn.onclick = function () {
@@ -197,5 +207,16 @@
             modal.style.display = "none";
         }
     }
+
+    // Validation
+    const onSubmit = (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const data = Object.fromEntries(formData.entries());
+        const {name, email, subject, message} = data;
+        console.log(name, email, subject, message);
+    }
+
+    document.querySelector("#form").addEventListener("submit", onSubmit);
 </script>
 </html>
