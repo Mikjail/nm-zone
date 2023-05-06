@@ -4,9 +4,10 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "eslint-config-prettier": "8.8.0",
-    "husky": "^8.0.0",
-    "prettier": "2.8.8",
+    "eslint": "^8.40.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
     "stylelint": "^15.6.1",
     "stylelint-config-standard": "^33.0.0",
     "stylelint-prettier": "^3.0.0"
@@ -24,8 +25,5 @@
     "*.css*": [
       "stylelint --fix"
     ]
-  },
-  "dependencies": {
-    "lint-staged": "^13.2.2"
   }
 }
