@@ -1,16 +1,9 @@
 {
-  "scripts": {
-    "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
-    "prepare": "husky install"
-  },
   "devDependencies": {
     "eslint": "^8.40.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
-    "prettier": "^2.8.8",
-    "stylelint": "^15.6.1",
-    "stylelint-config-standard": "^33.0.0",
-    "stylelint-prettier": "^3.0.0"
+    "prettier": "^2.8.8"
   },
   "husky": {
     "hooks": {
@@ -18,12 +11,14 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "npx prettier --write",
-      "npx eslint --fix"
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
     ],
-    "*.css*": [
-      "stylelint --fix"
+    "*.{html,css}": [
+      "prettier --write",
+      "git add"
     ]
   }
 }
