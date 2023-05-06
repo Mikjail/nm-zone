@@ -1,10 +1,15 @@
 {
+  "scripts": {
+    "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
+    "prepare": "husky install"
+  },
   "devDependencies": {
-    "eslint": "^8.40.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "husky": "^8.0.3",
-    "prettier": "2.8.8"
+    "eslint-config-prettier": "8.8.0",
+    "husky": "^8.0.0",
+    "prettier": "2.8.8",
+    "stylelint": "^15.6.1",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-prettier": "^3.0.0"
   },
   "husky": {
     "hooks": {
@@ -12,9 +17,12 @@
     }
   },
   "lint-staged": {
-    "*.js": [
-      "./node_modules/.bin/eslint — fix",
-      "git add"
+    "**/*.{js,jsx,ts,tsx}": [
+      "npx prettier --write",
+      "npx eslint --fix"
+    ],
+    "*.css*": [
+      "stylelint --fix"
     ]
   }
 }
