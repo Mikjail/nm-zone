@@ -1,222 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>NM Zone</title>
-    <link rel="stylesheet" href="dist/style.min.css"/>
+  <meta charset='UTF-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>NM Zone</title>
+  <link rel='stylesheet' href='dist/style.min.css' />
 </head>
 <body>
 <header>
-    <img src="assets/logo.svg" alt="Company Logo"/>
-    <input id="burger" type="checkbox"/>
-    <label for="burger" id="burger-container">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
-    <nav>
-        <ul>
-            <li><a href="#home"> Home </a></li>
-            <li><a href="#about-us">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#tech-stack">Technologies</a></li>
-        </ul>
-    </nav>
-    <button class="btn" id="contact-btn">Get in Touch</button>
+  <img src='assets/logo.svg' alt='Company Logo' />
+  <input class='burger-checkbox-menu' id='burger' type='checkbox' />
+  <label for='burger' id='burger-container'>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <nav>
+    <ul>
+      <li><a href='#home'> Home </a></li>
+      <li><a href='#about-us'>About Us</a></li>
+      <li><a href='#services'>Services</a></li>
+      <li><a href='#tech-stack'>Technologies</a></li>
+    </ul>
+  </nav>
+  <button class='btn' id='contact-btn'>Get in Touch</button>
 </header>
 <main>
-    <section id="home">
-        <div class="home__wrapper">
-            <div class="home__content">
-                <h1>Hello there!</h1>
-                <h1>
-                    it's <span class="accent">Nastya</span> &
-                    <span class="accent">Mika</span>!
-                </h1>
-                <p>IT Commpany based in Berlin.</p>
-                <p>
-                    We are IT company based in Berlin, who can bring your ideas to life.
-                </p>
-                <button class="btn btn-secondary">Explore</button>
-            </div>
-            <div class="home__preview">
-                <img src="assets/main/main-mobile.svg" alt="">
-                <img src="assets/main/main-pc.svg" alt=""/>
-            </div>
-            <button class="btn">Get in Touch</button>
-        </div>
-    </section>
-    <section id="about-us">
-        <div class="about-us__wrapper">
-            <div class="about-us__authors">
-                <h3>Nastya</h3>
-                <p>
-                    I am <strong>UI/UX</strong> designer with 2 years of experience.
-                    In order to learn about my work, here is my personal website
-                </p>
-            </div>
-            <img class="about-us__img" src="assets/about/us.svg" alt=""/>
-            <div class="about-us__authors">
-                <h3>Mika</h3>
-                <p>
-                    I am a <strong>Web Engineer</strong> with 6 years of experience
-                </p>
-            </div>
-        </div>
-    </section>
-    <section id="services">
-        <div class="services__wrapper">
-            <div class="services__card services__card--top">
-                <img src="assets/services/web-design.svg" alt="Web Design">
-                <h4>Web Design</h4>
-            </div>
-            <div class="services__card services__card--top">
-                <img src="assets/services/mobile-app.svg" alt="Web Design">
-                <h4>Mobile App</h4>
-            </div>
-            <div class="services__card services__card--bottom">
-                <img src="assets/services/web-dev.svg" alt="Web Design">
-                <h4>Web Development</h4>
-            </div>
-            <div class="services__card services__card--bottom">
-                <img src="assets/services/ux-research.svg" alt="Web Design">
-                <h4>Mobile App</h4>
-            </div>
-        </div>
-    </section>
-    <section id="tech-stack">
-        <div class="tech-stack__grid">
-            <div class="tech-stack__img">
-                <img src="assets/tech-stack/figma.svg" alt="">
-            </div>
-        </div>
-        <div class="tech-stack__grid">
-            <div class="tech-stack__line">
-                <img src="assets/tech-stack/line-top-left.svg" alt="">
-            </div>
-            <div class="tech-stack__line">
-                <img src="assets/tech-stack/line-top-right.svg" alt="">
-            </div>
-        </div>
-        <div class="tech-stack__grid">
-            <div class="tech-stack__img">
-                <img src="assets/tech-stack/adobe.svg" alt="">
-            </div>
-            <div class="tech-stack__img">
-                <img src="assets/tech-stack/sketch.svg" alt="">
-            </div>
-        </div>
-        <div class="tech-stack__grid">
-            <div class="tech-stack__line">
-                <img src="assets/tech-stack/line-middle-left.svg" alt="">
-            </div>
-            <div class="tech-stack__line">
-                <img src="assets/tech-stack/line-middle-right.svg" alt="">
-            </div>
-        </div>
-        <div class="tech-stack__grid">
-            <div class="tech-stack__img">
-                <img src="assets/tech-stack/react.svg" alt="">
-            </div>
-            <div class="tech-stack__img">
-                <img src="assets/tech-stack/angular.svg" alt="">
-            </div>
-        </div>
-        <div class="tech-stack__grid">
-            <div class="tech-stack__line">
-                <img src="assets/tech-stack/line-bottom-left.svg" alt="">
-            </div>
-            <div class="tech-stack__line">
-                <img src="assets/tech-stack/line-bottom-right.svg" alt="">
-            </div>
-        </div>
-        <div class="tech-stack__grid">
-            <div class="tech-stack__img">
-                <img src="assets/tech-stack/nodejs.svg" alt="">
-            </div>
-            <div class="tech-stack__img">
-                <img src="assets/tech-stack/sass.svg" alt="">
-            </div>
-        </div>
-    </section>
+  <section id='home'>
+    <div class='home__wrapper'>
+      <div class='home__content'>
+        <h1>Hello there!</h1>
+        <h1>
+          it's <span class='accent'>Nastya</span> &
+          <span class='accent'>Mika</span>!
+        </h1>
+        <p>IT Commpany based in Berlin.</p>
+        <p>
+          We are IT company based in Berlin, who can bring your ideas to life.
+        </p>
+        <button class='btn btn-secondary'>Explore</button>
+      </div>
+      <div class='home__preview'>
+        <img src='assets/main/main-mobile.svg' alt=''>
+        <img src='assets/main/main-pc.svg' alt='' />
+      </div>
+      <button class='btn'>Get in Touch</button>
+    </div>
+  </section>
+  <section id='about-us'>
+    <div class='about-us__wrapper'>
+      <div class='about-us__authors'>
+        <h3>Nastya</h3>
+        <p>
+          I am <strong>UI/UX</strong> designer with 2 years of experience.
+          In order to learn about my work, here is my personal website
+        </p>
+      </div>
+      <img class='about-us__img' src='assets/about/us.svg' alt='' />
+      <div class='about-us__authors'>
+        <h3>Mika</h3>
+        <p>
+          I am a <strong>Web Engineer</strong> with 6 years of experience
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id='services'>
+    <div class='services__wrapper'>
+      <div class='services__card services__card--top'>
+        <img src='assets/services/web-design.svg' alt='Web Design'>
+        <h4>Web Design</h4>
+      </div>
+      <div class='services__card services__card--top'>
+        <img src='assets/services/mobile-app.svg' alt='Web Design'>
+        <h4>Mobile App</h4>
+      </div>
+      <div class='services__card services__card--bottom'>
+        <img src='assets/services/web-dev.svg' alt='Web Design'>
+        <h4>Web Development</h4>
+      </div>
+      <div class='services__card services__card--bottom'>
+        <img src='assets/services/ux-research.svg' alt='Web Design'>
+        <h4>Mobile App</h4>
+      </div>
+    </div>
+  </section>
+  <section id='tech-stack'>
+    <div class='tech-stack__grid'>
+      <div class='tech-stack__img'>
+        <img src='assets/tech-stack/figma.svg' alt=''>
+      </div>
+    </div>
+    <div class='tech-stack__grid'>
+      <div class='tech-stack__line'>
+        <img src='assets/tech-stack/line-top-left.svg' alt=''>
+      </div>
+      <div class='tech-stack__line'>
+        <img src='assets/tech-stack/line-top-right.svg' alt=''>
+      </div>
+    </div>
+    <div class='tech-stack__grid'>
+      <div class='tech-stack__img'>
+        <img src='assets/tech-stack/adobe.svg' alt=''>
+      </div>
+      <div class='tech-stack__img'>
+        <img src='assets/tech-stack/sketch.svg' alt=''>
+      </div>
+    </div>
+    <div class='tech-stack__grid'>
+      <div class='tech-stack__line'>
+        <img src='assets/tech-stack/line-middle-left.svg' alt=''>
+      </div>
+      <div class='tech-stack__line'>
+        <img src='assets/tech-stack/line-middle-right.svg' alt=''>
+      </div>
+    </div>
+    <div class='tech-stack__grid'>
+      <div class='tech-stack__img'>
+        <img src='assets/tech-stack/react.svg' alt=''>
+      </div>
+      <div class='tech-stack__img'>
+        <img src='assets/tech-stack/angular.svg' alt=''>
+      </div>
+    </div>
+    <div class='tech-stack__grid'>
+      <div class='tech-stack__line'>
+        <img src='assets/tech-stack/line-bottom-left.svg' alt=''>
+      </div>
+      <div class='tech-stack__line'>
+        <img src='assets/tech-stack/line-bottom-right.svg' alt=''>
+      </div>
+    </div>
+    <div class='tech-stack__grid'>
+      <div class='tech-stack__img'>
+        <img src='assets/tech-stack/nodejs.svg' alt=''>
+      </div>
+      <div class='tech-stack__img'>
+        <img src='assets/tech-stack/sass.svg' alt=''>
+      </div>
+    </div>
+  </section>
 </main>
 <!-- The Modal -->
-<div id="myModal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-        <div class="modal-header">
-            <button class="close">
-                <img src="assets/modal/close-btn.svg" alt="close modal">
-            </button>
-            <img src="assets/logo.svg" alt="logo.svg">
-            <h2 class="secondary">Let's collaborate!</h2>
-        </div>
-        <div class="modal-body">
-            <form id="form" class="form" onsubmit="onSubmit">
-                <label for="name">
-                    <input type="text" name="name" id="name" placeholder="Jane Doe" required>
-                </label>
-                <label for="email">
-                    <input type="email" name="email" id="email" placeholder="example@email.com" required>
-                </label>
-                <label for="subject">
-                    <input type="text" name="subject" id="subject" placeholder="Subject" required>
-                </label>
-                <label for="message">
-                    <textarea id="message" name="message" placeholder="Your message" style="resize: none"
-                              required></textarea>
-                </label>
-                <button type="submit" class="btn">
-                    Submit
-                </button>
-            </form>
-        </div>
+<div id='myModal' class='modal'>
+  <!-- Modal content -->
+  <div class='modal-content'>
+    <div class='modal-header'>
+      <button class='close'>
+        <img src='assets/modal/close-btn.svg' alt='close modal'>
+      </button>
+      <img src='assets/logo.svg' alt='logo.svg'>
+      <h2 class='secondary'>Let's collaborate!</h2>
     </div>
+    <div class='modal-body'>
+      <form id='form' class='form' onsubmit='onSubmit'>
+        <label for='name'>
+          <input type='text' name='name' id='name' placeholder='Jane Doe' required>
+        </label>
+        <label for='email'>
+          <input type='email' name='email' id='email' placeholder='example@email.com' required>
+        </label>
+        <label for='subject'>
+          <input type='text' name='subject' id='subject' placeholder='Subject' required>
+        </label>
+        <label for='message'>
+                    <textarea id='message' name='message' placeholder='Your message' style='resize: none'
+                              required></textarea>
+        </label>
+        <button type='submit' class='btn'>
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
 
 </div>
 </body>
 <script>
-    if (!document.location.hash) {
-        document.location.hash = '#home'
+  if (!document.location.hash) {
+    document.location.hash = '#home';
+  }
+  // Get the modal
+  const modal = document.getElementById('myModal');
+
+  // Get the button that opens the modal
+  const btn = document.getElementById('contact-btn');
+
+  // Get the <span> element that closes the modal
+  const span = document.getElementsByClassName('close')[0];
+
+  // When the user clicks on the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = 'block';
+  };
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = 'none';
+  };
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
     }
-    // Get the modal
-    const modal = document.getElementById("myModal");
+  };
 
-    // Get the button that opens the modal
-    const btn = document.getElementById("contact-btn");
+  // Validation
+  const onSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+    const { name, email, subject, message } = data;
+    console.log(name, email, subject, message);
+  };
 
-    // Get the <span> element that closes the modal
-    const span = document.getElementsByClassName("close")[0];
+  document.querySelector('#form').addEventListener('submit', onSubmit);
 
-    // When the user clicks on the button, open the modal
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-
-    // Validation
-    const onSubmit = (event) => {
-        event.preventDefault();
-        const formData = new FormData(event.target);
-        const data = Object.fromEntries(formData.entries());
-        const {name, email, subject, message} = data;
-        console.log(name, email, subject, message);
-    }
-
-    document.querySelector("#form").addEventListener("submit", onSubmit);
+  // Menu toggle
+  const menu = document.querySelector('.burger-checkbox-menu');
+  const links = document.querySelectorAll('nav a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      menu.checked = false;
+    });
+  });
 </script>
 </html>

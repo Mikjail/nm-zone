@@ -1,6 +1,7 @@
 #about-us {
   margin: auto;
 }
+
 .about-us__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

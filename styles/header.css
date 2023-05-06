@@ -1,25 +1,51 @@
 header {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  height: 20%;
-  max-width: var(--content-max-width);
-  margin: auto;
-  align-items: center;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    height: 20%;
+    max-width: var(--content-max-width);
+    margin: auto;
+    align-items: center;
 }
 
 header ul {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
 }
 
 li {
-  margin-right: 2rem;
-  font-size: 1.625rem;
+    margin-right: 2rem;
+    font-size: 1.625rem;
 }
 
 header img {
-  position: relative;
-  left: -4rem;
+    position: relative;
+    left: -4rem;
+}
+
+/* Large Breakpoint */
+@media screen and (max-width: 1280px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 4rem;
+    }
+
+    header ul,
+    header .btn {
+        display: none;
+    }
+
+    header > img {
+        width: 10rem;
+    }
+}
+
+/* Small Breakpoint*/
+@media only screen and (max-width: 400px) {
+    header {
+        margin: 0 2rem 0 4rem;
+    }
 }
