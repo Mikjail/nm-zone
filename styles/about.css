@@ -25,3 +25,86 @@
 .about-us__authors:last-child {
   text-align: right;
 }
+
+.about-us__content,
+.back-btn__mobile,
+.contact-us__mobile {
+  display: none;
+}
+
+.company-logo {
+  display: none;
+}
+
+@media only screen and (max-width: 1280px) {
+  #about-us {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+  }
+
+  .about-us__wrapper {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .about-us__wrapper {
+    height: 100%;
+    background-image: url('../assets/main/main-mobile.svg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 1rem;
+  }
+
+  .about-us__img,
+  .about-us__authors {
+    display: none;
+  }
+
+  .about-us__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 17rem;
+    gap: 5rem;
+  }
+
+  .about-us__content p {
+    font-size: var(--x-large);
+  }
+
+  .contact-us__mobile {
+    display: block;
+  }
+
+  .back-btn__mobile {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    background-image: url('../assets/back-arrow.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .about-us__wrapper {
+    background-size: 20rem;
+  }
+
+  .about-us__content {
+    justify-content: space-between;
+    margin-top: 13rem;
+    padding-top: 1rem;
+    gap: 0;
+  }
+
+  .about-us__content p {
+    font-size: var(--large);
+  }
+
+  .contact-us__mobile {
+    display: block;
+  }
+}

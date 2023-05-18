@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "Caviar";
-  src: url("../assets/fonts/caviardreams-webfont.woff2") format("woff2"),
-  url("../assets/fonts/caviardreams-webfont.woff") format("woff");
+  font-family: 'Caviar';
+  src: url('../assets/fonts/caviardreams-webfont.woff2') format('woff2'),
+    url('../assets/fonts/caviardreams-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -9,7 +9,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  font-family: "Caviar";
+  font-family: 'Caviar';
   background: url(../assets/main/home-bg.svg) no-repeat, var(--bg-white);
   background-position: top right;
 }
@@ -65,7 +65,6 @@ a {
 }
 
 @media only screen and (max-width: 1280px) {
-  main #about-us,
   main #tech-stack {
     margin: auto 3rem;
   }

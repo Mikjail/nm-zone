@@ -9,7 +9,8 @@
   </head>
   <body>
     <header>
-      <img src="assets/logo.svg" alt="Company Logo" />
+      <img src="assets/logo.svg" class="company-logo" alt="Company Logo" />
+      <a href="#home" class="back-btn__mobile"></a>
       <input class="burger-checkbox-menu" id="burger" type="checkbox" />
       <label for="burger" id="burger-container">
         <span></span>
@@ -50,20 +51,34 @@
           <button class="btn">Get in Touch</button>
         </div>
       </section>
-      <section id="bout-us">
+      <section id="about-us">
         <div class="about-us__wrapper">
           <div class="about-us__authors">
             <h3>Nastya</h3>
             <p>
-              I am <strong>UI/UX</strong> designer with 2 years of experience.
-              In order to learn about my work, here is my personal website
+              I am <strong>UI/UX</strong> designer with over 2 years of
+              experience bringing extensive expertise working with diverse
+              clients globally.
             </p>
           </div>
           <img class="about-us__img" src="assets/about/us.svg" alt="" />
+          <div class="about-us__content">
+            <p>
+              Our <strong>Web Engineer</strong> and
+              <strong>UX Specialist</strong> team offers a comprehensive range
+              of services to enhance your online presence and deliver
+              exceptional user experiences. We excel in web development,
+              creating robust and scalable websites, e-commerce platforms, and
+              content management systems.
+            </p>
+            <button class="btn contact-us__mobile">Get in Touch</button>
+          </div>
           <div class="about-us__authors">
             <h3>Mika</h3>
             <p>
-              I am a <strong>Web Engineer</strong> with 6 years of experience
+              I am a <strong>Web Engineer</strong> with over 5 years of
+              experience. I am dedicated to following industry best practices,
+              consistently delivering scalable and maintainable solutions.
             </p>
           </div>
         </div>
@@ -244,9 +259,27 @@
     const menu = document.querySelector('.burger-checkbox-menu');
     const links = document.querySelectorAll('nav a');
     links.forEach(link => {
-      link.addEventListener('click', () => {
+      link.addEventListener('click', event => {
         menu.checked = false;
+        // on window size < 1280px
+        if (window.innerWidth < 1280) {
+          if (event.target.hash === '#home') {
+            backBtn.style.display = 'none';
+            companyLogo.style.display = 'block';
+          } else {
+            backBtn.style.display = 'block';
+            companyLogo.style.display = 'none';
+          }
+        }
       });
+    });
+
+    // Back button
+    const backBtn = document.querySelector('.back-btn__mobile');
+    const companyLogo = document.querySelector('.company-logo');
+    backBtn.addEventListener('click', () => {
+      backBtn.style.display = 'none';
+      companyLogo.style.display = 'block';
     });
   </script>
 </html>
