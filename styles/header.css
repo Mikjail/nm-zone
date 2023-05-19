@@ -54,6 +54,10 @@ header img {
 /* Small Breakpoint*/
 @media only screen and (max-width: 400px) {
   header {
-    margin: 0 2rem 0 4rem;
+    margin: 0 2rem;
+  }
+
+  header .company-logo {
+    margin-left: 2rem;
   }
 }
