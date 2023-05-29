@@ -64,8 +64,20 @@ a {
   color: var(--secondary);
 }
 
+.mobile-btn-contact-us {
+  display: none;
+}
+
 @media only screen and (max-width: 1280px) {
   main #tech-stack {
     margin: auto 3rem;
+  }
+
+  .mobile-btn-contact-us {
+    display: block;
+    height: 50px;
+    font-size: 1rem;
+    width: 90%;
+    margin: 0 2rem;
   }
 }

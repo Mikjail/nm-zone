@@ -1,5 +1,5 @@
 #services {
-  background: url("../assets/services/services.svg") center no-repeat;
+  background: url('../assets/services/services.svg') center no-repeat;
   margin: auto;
 }
 
@@ -21,7 +21,6 @@
   height: 14.5rem;
   border-radius: 1rem;
   border: 0.0625rem solid var(--black);
-
 }
 
 .services__card--bottom:nth-child(even),
@@ -33,4 +32,54 @@
 .services__card--bottom:nth-child(odd) {
   background-color: var(--secondary);
   color: white;
+}
+
+/* Mobile responsive */
+@media only screen and (max-width: 1280px) {
+  #services {
+    background: none;
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .services__card--top:nth-child(1) {
+    grid-area: card-1;
+  }
+
+  .services__card--top:nth-child(2) {
+    grid-area: card-4;
+  }
+
+  .services__card--bottom:nth-child(1) {
+    grid-area: card-3;
+  }
+
+  .services__card--bottom:nth-child(2) {
+    grid-area: card-2;
+  }
+
+  .services__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'card-1' 'card-2' 'card-3' 'card-4';
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .services__card {
+    height: 6rem;
+    width: 100%;
+    max-width: 50rem;
+    margin: auto;
+  }
+
+  .services__card img {
+    width: 2.5rem;
+  }
+
+  .services__card h4 {
+    font-size: var(--large);
+  }
 }

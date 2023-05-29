@@ -74,9 +74,19 @@ button {
 .secondary {
   color: var(--secondary);
 }
+.mobile-btn-contact-us {
+  display: none;
+}
 @media only screen and (max-width: 1280px) {
   main #tech-stack {
     margin: auto 3rem;
+  }
+  .mobile-btn-contact-us {
+    display: block;
+    height: 50px;
+    font-size: 1rem;
+    width: 90%;
+    margin: 0 2rem;
   }
 }
 #about-us {
@@ -112,7 +122,6 @@ button {
 @media only screen and (max-width: 1280px) {
   #about-us {
     margin: 0 auto;
-    height: 100%;
     width: 100%;
   }
   .about-us__wrapper {
@@ -231,7 +240,7 @@ button {
     background-color: var(--black);
     background-repeat: no-repeat;
     background-position: center 80%;
-    opacity: 0.8;
+    opacity: 0.95;
     transition: 0.5s;
     transition-delay: 0.5s;
   }
@@ -257,7 +266,7 @@ button {
 header {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  height: 20%;
+  height: 15%;
   max-width: var(--content-max-width);
   margin: auto;
   align-items: center;
@@ -304,10 +313,13 @@ header img {
   header .company-logo {
     margin-left: 2rem;
   }
+  li {
+    margin-right: 0;
+  }
 }
 main {
   display: flex;
-  height: 80%;
+  height: 85%;
   max-width: var(--content-max-width);
   margin: auto;
 }
@@ -356,6 +368,11 @@ section:target {
   display: none;
 }
 @media only screen and (max-width: 1280px) {
+  main {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
   #home {
     margin: 0;
   }
@@ -570,6 +587,46 @@ a {
 .services__card--top:nth-child(even) {
   background-color: var(--secondary);
   color: #fff;
+}
+@media only screen and (max-width: 1280px) {
+  #services {
+    background: 0 0;
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+  }
+  .services__card--top:nth-child(1) {
+    grid-area: card-1;
+  }
+  .services__card--top:nth-child(2) {
+    grid-area: card-4;
+  }
+  .services__card--bottom:nth-child(1) {
+    grid-area: card-3;
+  }
+  .services__card--bottom:nth-child(2) {
+    grid-area: card-2;
+  }
+  .services__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'card-1' 'card-2' 'card-3' 'card-4';
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .services__card {
+    height: 6rem;
+    width: 100%;
+    max-width: 50rem;
+    margin: auto;
+  }
+  .services__card img {
+    width: 2.5rem;
+  }
+  .services__card h4 {
+    font-size: var(--large);
+  }
 }
 #tech-stack {
   background: url(../assets/tech-stack/pc.svg) center no-repeat;
