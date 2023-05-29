@@ -154,7 +154,7 @@ button {
     display: block;
   }
   .back-btn__mobile {
-    display: block;
+    display: block !important;
     height: 2rem;
     width: 2rem;
     background-image: url(../assets/back-arrow.svg);
@@ -185,8 +185,8 @@ button {
   }
   #burger + label {
     position: relative;
-    height: 3rem;
-    width: 2.75rem;
+    height: 1.5rem;
+    width: 2rem;
     z-index: 5;
   }
   #burger-container {
@@ -201,14 +201,12 @@ button {
     background: var(--secondary);
     transition: 0.5s;
   }
-  #burger-container span:nth-child(2) {
-    top: 15px;
-  }
+  #burger-container span:nth-child(2),
   #burger-container span:nth-child(3) {
-    top: 15px;
+    top: 0.5625rem;
   }
   #burger-container span:nth-child(4) {
-    top: 1.95rem;
+    top: 1.2rem;
   }
   label:hover {
     cursor: pointer;
@@ -291,6 +289,9 @@ header img {
 .back-btn__mobile {
   display: none;
 }
+#back-btn-and-title {
+  display: none;
+}
 @media screen and (max-width: 1280px) {
   header {
     display: flex;
@@ -304,6 +305,15 @@ header img {
   }
   header > img {
     width: 10rem;
+  }
+  #section-selected {
+    color: var(--secondary);
+    flex-grow: 1;
+    text-align: center;
+  }
+  #back-btn-and-title {
+    flex-grow: 1;
+    display: flex;
   }
 }
 @media only screen and (max-width: 400px) {

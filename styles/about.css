@@ -78,7 +78,7 @@
   }
 
   .back-btn__mobile {
-    display: block;
+    display: block !important;
     height: 2rem;
     width: 2rem;
     background-image: url('../assets/back-arrow.svg');

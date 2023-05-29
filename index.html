@@ -10,7 +10,10 @@
   <body>
     <header>
       <img src="assets/logo.svg" class="company-logo" alt="Company Logo" />
-      <a href="#home" class="back-btn__mobile"></a>
+      <div id="back-btn-and-title">
+        <a href="#home" class="back-btn__mobile"></a>
+        <h4 id="section-selected"></h4>
+      </div>
       <input class="burger-checkbox-menu" id="burger" type="checkbox" />
       <label for="burger" id="burger-container">
         <span></span>
@@ -217,6 +220,50 @@
     </div>
   </body>
   <script>
+    // Menu toggle, back button and section title interaction
+    const menu = document.querySelector('.burger-checkbox-menu');
+    const links = document.querySelectorAll('nav a');
+    const backBtnTitleContainer = document.querySelector('#back-btn-and-title');
+    const title = document.querySelector('#section-selected');
+    const backBtn = document.querySelector('.back-btn__mobile');
+    const companyLogo = document.querySelector('.company-logo');
+
+    const setMobileHeader = () => {
+      if (window.innerWidth < 1280) {
+        switch (window.location.hash) {
+          case '#about-us':
+            title.textContent = 'About Us';
+            companyLogo.style.display = 'none';
+            backBtnTitleContainer.style.display = 'flex';
+            break;
+          case '#services':
+            title.textContent = 'Services';
+            companyLogo.style.display = 'none';
+            backBtnTitleContainer.style.display = 'flex';
+            break;
+          case '#tech-stack':
+            title.textContent = 'Tech Stack';
+            companyLogo.style.display = 'none';
+            backBtnTitleContainer.style.display = 'flex';
+            break;
+          default:
+            backBtnTitleContainer.style.display = 'none';
+            companyLogo.style.display = 'block';
+        }
+      }
+    };
+
+    links.forEach(link => {
+      link.addEventListener('click', event => {
+        menu.checked = false;
+      });
+    });
+    // Handle location change event
+    window.onhashchange = function (event) {
+      setMobileHeader();
+    };
+    setMobileHeader();
+
     if (!document.location.hash) {
       document.location.hash = '#home';
     }
@@ -256,32 +303,5 @@
     };
 
     document.querySelector('#form').addEventListener('submit', onSubmit);
-
-    // Menu toggle
-    const menu = document.querySelector('.burger-checkbox-menu');
-    const links = document.querySelectorAll('nav a');
-    links.forEach(link => {
-      link.addEventListener('click', event => {
-        menu.checked = false;
-        // on window size < 1280px
-        if (window.innerWidth < 1280) {
-          if (event.target.hash === '#home') {
-            backBtn.style.display = 'none';
-            companyLogo.style.display = 'block';
-          } else {
-            backBtn.style.display = 'block';
-            companyLogo.style.display = 'none';
-          }
-        }
-      });
-    });
-
-    // Back button
-    const backBtn = document.querySelector('.back-btn__mobile');
-    const companyLogo = document.querySelector('.company-logo');
-    backBtn.addEventListener('click', () => {
-      backBtn.style.display = 'none';
-      companyLogo.style.display = 'block';
-    });
   </script>
 </html>

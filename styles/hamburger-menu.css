@@ -5,8 +5,8 @@
 
   #burger + label {
     position: relative;
-    height: 3rem;
-    width: 2.75rem;
+    height: 1.5rem;
+    width: 2rem;
     z-index: 5;
   }
 
@@ -24,16 +24,13 @@
     transition: 0.5s;
   }
 
-  #burger-container span:nth-child(2) {
-    top: 15px;
-  }
-
+  #burger-container span:nth-child(2),
   #burger-container span:nth-child(3) {
-    top: 15px;
+    top: 0.5625rem;
   }
 
   #burger-container span:nth-child(4) {
-    top: 1.95rem;
+    top: 1.2rem;
   }
 
   label:hover {
