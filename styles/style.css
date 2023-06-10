@@ -68,11 +68,13 @@ a {
   display: none;
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (min-width: 900px) and (max-width: 1280px) {
   main #tech-stack {
-    margin: auto 3rem;
+    margin: 0;
   }
+}
 
+@media only screen and (max-width: 1280px) {
   .mobile-btn-contact-us {
     display: block;
     height: 50px;
